@@ -2,7 +2,7 @@
   Github Finder - Using Github API
 </h3>
 
-## Iniciar
+## How to init
 
 npm install
 
