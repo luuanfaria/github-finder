@@ -1,3 +1,11 @@
-GitHub Profile Search
-<br/>
-<a href="https://wizardly-bartik-6480f0.netlify.app/">Preview App</a>
+<h3 align="center">
+  Github Finder - Using Github API
+</h3>
+
+## Iniciar
+
+npm install
+
+npm start
+
+

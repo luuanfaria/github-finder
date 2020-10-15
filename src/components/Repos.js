@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Container } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 const Repos = ({ data }) => {
 
@@ -11,15 +11,19 @@ const Repos = ({ data }) => {
                 </Card.Title>
                 <Card.Text>
                     {item.description}
+                    <br></br>
+                    <p className="btn-link disabled">
+                        {item.language}
+                    </p>                    
                 </Card.Text>
             </Card.Body>
         </Card>
     ))
     return (
-        <Container>
-            <h1>Repos</h1>
+        <>
+            <h5>Repositórios</h5>
             {items}
-        </ Container>
+        </>
     )
 }
 

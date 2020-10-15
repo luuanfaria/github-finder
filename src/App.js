@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import './App.css'
 import { Header, Search, Profile, Repos } from './components'
+import { Container } from 'react-bootstrap'
+
 
 function App() {
   const [query, setQuery] = useState('')
@@ -11,8 +13,8 @@ function App() {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const { data } = await axios.get(`https://api.github.com/users/Markusppp`)
-        const repos = await axios.get(`https://api.github.com/users/Markusppp/repos?per_page20`)
+        const { data } = await axios.get(`https://api.github.com/users/luuanfaria`)
+        const repos = await axios.get(`https://api.github.com/users/luuanfaria/repos?per_page20`)
         setProfileData(data)
         setReposData(repos.data)
       } catch (error) {
@@ -40,13 +42,12 @@ function App() {
   }, [query])
 
   return (
-    <>
-      <Header />
-      <Search inputQ={setQuery} />
-      <Profile data={profileData} />
-      <Repos data={reposData} />
-
-    </>
+    <Container>
+        <Header />
+        <Search inputQ={setQuery} />
+        <Profile data={profileData} />
+        <Repos data={reposData} />
+      </Container>
   );
 }
 

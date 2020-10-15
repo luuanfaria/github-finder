@@ -1,69 +1,76 @@
+body {
+    background: #23074d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cc5333, #23074d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cc5333, #23074d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    max-width: 700px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: 80px auto;
+}
+
+svg {
+    margin-right: 5px;
+}
+
+.card {
+    margin: 15px 0;
+    border: none;
+    border-bottom: 1px solid aliceblue;
+}
+
+.card-profile {
+    margin: 20px 0;
+}
+
 .input-group{
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-}
-
-.left a:hover{
-    color: #fff !important;
-}
-
-.left{
-    text-align: center;
-}
-
-.left a{
-    width: 50%;
-    margin-top: 50px;
-}
-
-.left img{
-    border: 1px solid #333;
-    padding: 2px;
-    max-width: 90% !important;
-}
-
-.profile{
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
-.right{
-    margin: 0 auto;
+.input-group input {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-.right-one{
-    margin: 10px;
+.input-group .input-group-append {
+    border: 0;
+    padding: 0 15px;
+    margin-left: 10px;
+    border-radius: 4px;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.right-two{
-    margin: 10px;
-}
-
-.card{
-    margin-top: 10px;
-}
-
-.container h1{
-    text-align: center;
-}
-
-
-.right-two .list-group-item{
-    min-width: 80% !important;
-}
-
-@media (max-width: 1050px) {
-    .profile{
-        flex-direction: column;
+@media only screen and (max-width: 600px) {
+    .container {
+      width: 90%;
     }
-}
+  }
 
-@media (max-width: 580px) {
-    .list-group-item{
-        width: 100% !important;
-    }
-
-    .right-one .list-group{
-        flex-direction: column;
-    }
-}
